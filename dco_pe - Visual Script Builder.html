@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://dco.pe/vsb/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script async="" src="./dco_pe - Visual Script Builder_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-113252481-1');
+    </script>
+    <meta property="og:title" content="Visual Script Builder">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://dco.pe/vsb/">
+    <!-- <meta property="og:image" content="http://i.imgur.com/ickFLzp.png"> -->
+    <meta property="og:image" content="./dco_pe - Visual Script Builder_files/ickFLzp.png">
+    <meta property="description" content="Write custom Space Engineers scripts through a user interface without any coding experience. Learn how to use the Programmable Block with this free web-based tool.">
+    <meta property="keywords" content="Space Engineers, Visual Script Builder, VSB, SE, space, engineers, visual, script, builder, program, programmable, programming, scripting, block, code, tool, generator, creator, write, writer, helper, help, free">
+    <title>Visual Script Builder</title>
+    <link rel="shortcut icon" type="image/ico" href="http://dco.pe/vsb/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./dco_pe - Visual Script Builder_files/style111.css">
+  </head>
+  <body background="./dco_pe - Visual Script Builder_files/EazyiB6.png">
+    <script src="./dco_pe - Visual Script Builder_files/jquery.min.js"></script>
+    <script src="./dco_pe - Visual Script Builder_files/jquery-ui.js"></script> 
+    <script src="./dco_pe - Visual Script Builder_files/vsb111.js"></script>
+    
+    <div class="wrapper">
+    
+    <div class="content">
+    
+    <div class="section topbanner">
+      <div class="banner unselectable">
+        <img src="./dco_pe - Visual Script Builder_files/kOwaETJ.png" alt="Space Engineers Visual Script Builder">
+      </div>
+      <div class="dcopelogo bold mono red unselectable">
+        <a target="_blank" href="http://dco.pe/"><img src="./dco_pe - Visual Script Builder_files/sML35tF.png" alt="dcope" style="width:88px;height:30px;"></a>
+      </div>
+      <div class="instructions bold unselectable">
+        <a target="_blank" href="http://dco.pe/">instructions</a>
+      </div>
+      <div class="version unselectable">version 1.1.1</div>
+    </div>
+    <div class="section autosaved" style="display: none;">
+      <div class="continuesection">
+        <div class="bold large unselectable autosavetitle">
+          Autosaved Script Found
+        </div>
+        <div class="bold unselectable autosavedesc">
+          Load this script to pick up where you left off, or discard this script. Discarding the script will destroy it forever! Make sure you really don't need it.
+        </div>
+        <div class="autosaveicon1 left">
+          <img src="./dco_pe - Visual Script Builder_files/Km6BmEB.png" alt="load" style="width:120px;height:166px;">
+        </div>
+        <div class="autosaveicon2 right">
+          <img src="./dco_pe - Visual Script Builder_files/ZzMM1jm.png" alt="load" style="width:120px;height:133px;">
+        </div>
+        <div class="autosavebuttons">
+          <div class="continue left">
+            <button onclick="loadAutosave();">Load Autosaved Script</button>
+          </div>
+          <div class="discard right">
+            <button class="" onclick="discardScript();">Discard Autosaved Script</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebyside" style="display: none;">
+      <div class="section newsection">
+        <div class="bold large unselectable newtitle">
+          Create New Script
+        </div>
+        <div class="bold unselectable newdesc">
+          Start building from scratch.
+        </div>
+        <div class="newicon">
+          <img class="imageswap" src="./dco_pe - Visual Script Builder_files/KKlKZYg.png" data-src="https://i.imgur.com/KKlKZYg.png" data-hover="https://i.imgur.com/E8KEYS9.png" alt="new" style="width:120px;height:138px;" onclick="newScript();">
+        </div>
+      </div>
+      <div class="section loadsection">
+        <div class="bold large unselectable loadtitle disabled">
+          Load Script
+        </div>
+        <div class="bold unselectable loaddesc" style="display: none;">
+          Choose a saved script to load.
+        </div>
+        <div class="bold unselectable loaddescempty" hidden="hidden" style="display: block;">
+          You haven't saved any scripts yet.
+        </div>
+        <div class="loadicon disabled">
+          <img class="imageswap" src="./dco_pe - Visual Script Builder_files/287UNov.png" data-src="https://i.imgur.com/287UNov.png" data-hover="https://i.imgur.com/GB6DX4U.png" alt="load" style="width:120px;height:149px;" onclick="showManage();">
+        </div>
+      </div>
+      <div class="section importsection">
+        <div class="bold large unselectable importtitle">
+          Import Script
+        </div>
+        <div class="bold unselectable importdesc">
+          Load a script by load line.
+        </div>
+        <div class="importicon">
+          <img class="imageswap" src="./dco_pe - Visual Script Builder_files/XFyXfqK.png" data-src="https://i.imgur.com/XFyXfqK.png" data-hover="https://i.imgur.com/hTIa5RH.png" alt="load" style="width:120px;height:119px;" onclick="slideDrawer();">
+        </div>
+        <div class="importdrawer" style="display: none;">
+          <div class="importinput">
+            <input id="import" type="text" placeholder="// PASTE LOAD LINE HERE">
+          </div>
+          <div class="import">
+            <button onclick="importScript();">Import</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section manage" style="display: none;">
+      <div class="manageheader">
+        <div class="bold large unselectable managetitle left">
+          Load Script
+        </div>
+        <div class="bold unselectable manageback right" onclick="hideManage();">
+          X
+        </div>
+      </div>
+      <div class="managerows unselectable">
+        <table id="managetable">
+          <tbody><tr>
+            <td>Script Name</td>
+            <td>Modified</td>
+            <td></td>
+          </tr>
+          <!--<tr class="scriptrow">
+            <td class="load">
+              <button onmouseover="mouseOverLoadScript(this);" onmouseout="mouseOutLoadDeleteScript(this);" onclick="loadScriptById(0);">Load</button>
+            </td>
+            <td class="scriptname">Script 2</td>
+            <td class="lastupdate">Today</td>
+            <td class="deletesaved">
+              <button onmouseover="mouseOverDeleteScript(this);" onmouseout="mouseOutLoadDeleteScript(this);" onclick="deleteScript(0);">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="load">
+              <button onmouseover="mouseOverLoadScript(this);" onmouseout="mouseOutLoadDeleteScript(this);" onclick="loadScriptById(1);">Load</button>
+            </td>
+            <td class="scriptname">Script 1</td>
+            <td class="lastupdate">Yesterday</td>
+            <td class="deletesaved">
+              <button onmouseover="mouseOverDeleteScript(this);" onmouseout="mouseOutLoadDeleteScript(this);" onclick="deleteScript(1);">Delete</button>
+            </td>
+          </tr>-->
+        </tbody></table>
+      </div>
+    </div>
+    
+    <div class="section scriptcreation" style="">
+      <div class="sectiontitle unselectable" title="Start here to build your script">
+        <div class="bold large" title="Start here to build your script">
+          Script Creation
+        </div>
+        <div class="bold">
+          Start building your script here.
+        </div>
+      </div>
+      <div class="headerButtons">
+        <div class="newchunk">
+          <button class="firstBlockButton" onmouseover="mouseOverFirst();" onmouseout="mouseOutFirst();" onclick="addFirstBlock();">+ Add New Chunk</button><span class="infolink" onclick="showHelp(this, 7);"></span>
+        </div>
+      </div>
+      <div id="stage1">
+      </div>
+    </div>
+    <div class="section resultsection" style="">
+      <div class="sectiontitle bold large unselectable">
+        Result Script
+      </div>
+      <div class="errorsection">
+      </div>
+      <div class="copysection">
+	      <button id="generate" class="center" onclick="generateScript();" style="display: none;">Generate Script</button>
+        <div class="copysavesection">
+          <div class="copybutton">
+            <button id="copy" class="center" onclick="copyScriptToClipboard();">Copy Script To Clipboard</button>
+          </div>
+          <div class="savesection">
+            <button id="savebutton" class="center" onclick="saveScriptAs();">Save Script As</button>
+            <input id="savename" onkeydown="hideSaved();" placeholder="Script Name">
+            <span id="saved" class="unselectable" style="display: none;">Saved!</span>
+          </div>
+        </div>
+        <span id="copied" class="unselectable" style="display: none;">Copied!</span>
+      </div>
+      
+      <textarea rows="10" id="result" readonly="readonly" style="width: 969px;"></textarea>
+    </div>
+    <div class="forceLeft" style="">
+      <div class="section">
+        <div class="settings unselectable">
+          <div class="bold unselectable">
+            Script Settings
+          </div>
+          <div>
+            <button class="checkboxbutton thisGridButton selected">Affect only this grid</button> <span class="infolink" onclick="showHelp(this, 3, false);"></span>
+          </div>
+          <div>
+            <button class="checkboxbutton allowMissingBlocks">Allow missing blocks</button> <span class="infolink" onclick="showHelp(this, 19, false);"></span>
+          </div>
+          <div class="frequency">
+            <span class="settingslabel">Frequency</span> <span class="precisionspan"><select class="frequencySelect" onchange="stateChanged();"><option value="0"></option><option value="1">Every Tick</option><option value="2">Every 10 Ticks</option><option value="3">Every 100 Ticks</option></select><span class="infolink" onclick="showHelp(this, 21, false);"></span></span>
+          </div>
+          <div class="powerprecision right">
+            <span class="settingslabel">Power Precision</span> <span class="precisionspan"><input class="precision" type="number" value="2" onchange="stateChanged();" max="9" min="0"><span class="infolink" onclick="showHelp(this, 5, false);"></span></span>
+          </div>
+          <div class="energyprecision right">
+            <span class="settingslabel">Energy Precision</span> <span class="precisionspan"><input class="precision" type="number" value="2" onchange="stateChanged();" max="9" min="0"><span class="infolink" onclick="showHelp(this, 6, false);"></span></span>
+          </div>
+          <div class="itemprecision right">
+            <span class="settingslabel">Item Precision</span> <span class="precisionspan"><input class="precision" type="number" value="4" onchange="stateChanged();" max="4" min="0"><span class="infolink" onclick="showHelp(this, 20, false);"></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="section" style="display: none;">
+        <div class="pseudocode">
+          <div class="bold unselectable">
+            Overview of Logic Chunks
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outdated" hidden="hidden">This is an outdated version.<br><a target="_blank" href="http://dco.pe/vsb">Click here for the latest version.</a></div>
+    <div class="footer">
+      <div>
+        <div class="sectiontitle unselectable">
+          Thank you for using Visual Script Builder.
+        </div>
+        <div class="unselectable">
+          For access to Beta versions, detailed updates, discussions, suggestions, and bug reporting, please visit <a target="_blank" href="https://www.reddit.com/r/VisualScriptBuilder">/r/VisualScriptBuilder</a>.
+          <br>Visual Script Builder is provided 100% ad-free. It is not affiliated with Keen Software House in any way.
+          <br>This tool was designed for Google Chrome. If you use another browser, <a target="_blank" href="https://www.google.com/chrome/browser/">click here to meet hot singles in your area</a>.
+        </div>
+        <div class="small bold unselectable">
+          King_Baggot
+        </div>
+        <div class="dcopelogo bold mono red unselectable">
+          <a target="_blank" href="http://dco.pe/"><img src="./dco_pe - Visual Script Builder_files/sML35tF.png" alt="dcope" style="width:88px;height:30px;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="mask" style="display: none;">
+      <div class="masktop" onclick="hideHelp();">
+      </div>
+      <div class="maskleft" onclick="hideHelp();">
+      </div>
+      <div class="maskright" onclick="hideHelp();">
+      </div>
+      <div class="maskbottom" onclick="hideHelp();">
+      </div>
+    </div>
+    <div>
+      <datalist id="blocknamelist"></datalist>
+      <datalist id="groupnamelist"></datalist>
+    </div>
+    <div hidden="hidden" id="blocktemplate">
+      <div class="logicblock">
+        <div class="removeButton">
+          <span><button class="deleteButton" onmouseover="mouseOverDelete(this);" onmouseout="mouseOutDelete(this);" onclick="promptDelete(this);">Remove Chunk</button><span class="infolink" onclick="showHelp(this, 2);"></span></span>
+        </div>
+        <div class="errors"></div>
+        <div class="logic unselectable">
+          <div class="buttonlabel">Logic</div>
+          <button class="checkboxbutton logicButtonSmall" value="2" onclick="clickCheckboxRadioButton(this);">IF</button>
+          <button class="checkboxbutton selected logicButtonSmall" value="3" onclick="clickCheckboxRadioButton(this);">DO</button>
+          <button class="checkboxbutton logicButtonSmall" value="0" onclick="clickCheckboxRadioButton(this);">AND</button>
+          <button class="checkboxbutton logicButtonSmall" value="1" onclick="clickCheckboxRadioButton(this);">OR</button>
+          <button class="checkboxbutton logicButtonLarge" value="4" onclick="clickCheckboxRadioButton(this);">ELSE IF</button>
+          <button class="checkboxbutton logicButtonLarge" value="5" onclick="clickCheckboxRadioButton(this);">ELSE DO</button>
+          <span class="infolink" onclick="showHelp(this, 0);"></span>
+        </div>
+        <div class="blockoptions unselectable">
+          <div class="buttonlabel">Affect</div>
+          <button class="checkboxbutton selected" value="0" onclick="clickCheckboxRadioButton(this);">Single Block</button>
+          <button class="checkboxbutton" value="1" onclick="clickCheckboxRadioButton(this);">All Blocks of Type</button>
+          <button class="checkboxbutton" value="2" onclick="clickCheckboxRadioButton(this);">Any Blocks of Type</button>
+          <button class="checkboxbutton" value="3" onclick="clickCheckboxRadioButton(this);">Custom</button>
+          <span class="infolink" onclick="showHelp(this, 1);"></span>
+        </div>
+        <table class="blocktable">
+          <tbody><tr style="margin-top: 10px;">
+            <td class="blockheader unselectable" colspan="4">Block Type<span class="blockheaderspan"><span onclick="promptBlockTypeChange(this);"><select class="blockmenu" onchange="blockmenuchanged(this);"><option value="0">Functional Block</option><option value="1">Lighting Block</option><option value="2">Advanced Rotor</option><option value="3">Air Vent</option><option value="4">Airtight Hangar Door</option><option value="5">Antenna</option><option value="6">Arc furnace</option><option value="7">Artificial Mass</option><option value="8">Assembler</option><option value="9">Battery</option><option value="10">Beacon</option><option value="11">Button Panel</option><option value="12">Camera</option><option value="13">Cockpit</option><option value="14">Collector</option><option value="15">Connector</option><option value="16">Control Station</option><option value="17">Conveyor Sorter</option><option value="18">Door</option><option value="19">Drill</option><option value="20">Flight Seat</option><option value="21">Gatling Gun</option><option value="22">Gatling Turret</option><option value="23">Gravity Generator</option><option value="24">Grinder</option><option value="25">Gyroscope</option><option value="26">Hydrogen Tank</option><option value="27">Interior Light</option><option value="28">Interior Turret</option><option value="29">Landing Gear</option><option value="30">Large Atmospheric Thruster</option><option value="31">Large Cargo Container</option><option value="32">Large Hydrogen Thruster</option><option value="33">Large Ion Thruster</option><option value="34">Large Reactor</option><option value="35">Laser Antenna</option><option value="36">LCD Panel</option><option value="37">Medical Room</option><option value="38">Medium Cargo Container</option><option value="39">Merge Block</option><option value="40">Missile Turret</option><option value="41">Ore Detector</option><option value="42">Oxygen Generator</option><option value="43">Oxygen Tank</option><option value="44">Passenger Seat</option><option value="45">Piston</option><option value="46">Programmable block</option><option value="47">Projector</option><option value="48">Refinery</option><option value="49">Reloadable Rocket Launcher</option><option value="50">Remote Control</option><option value="51">Rocket Launcher</option><option value="52">Rotor</option><option value="53">Sensor</option><option value="54">Sliding Door</option><option value="55">Small Atmospheric Thruster</option><option value="56">Small Cargo Container</option><option value="57">Small Hydrogen Thruster</option><option value="58">Small Ion Thruster</option><option value="59">Small Reactor</option><option value="60">Solar Panel</option><option value="61">Sound Block</option><option value="62">Spherical Gravity Generator</option><option value="63">Spotlight</option><option value="64">Text Panel</option><option value="65">Timer Block</option><option value="66">Warhead</option><option value="67">Welder</option><option value="68">Wheel Suspension 1x1</option><option value="69">Wheel Suspension 3x3</option><option value="70">Wheel Suspension 5x5</option><option value="71">Wide LCD panel</option></select></span><span class="infolink" onclick="showHelp(this, 11);"></span></span></td>
+          </tr>
+          <tr>
+            <td class="blockheader unselectable" colspan="4">Block Name<span class="blockheaderspan"><input type="text" class="blockname" onchange="generateScript();" placeholder="custom name, blank for default"><span class="infolink" onclick="showHelp(this, 9);"></span></span></td>
+          </tr>
+          <tr style="margin-bottom: 5px;">
+            <td class="blockheader unselectable" colspan="4">Group Name<span class="blockheaderspan"><input type="text" class="groupname" onchange="generateScript();" placeholder="group name, not required" title="If not left blank, this Group Name must match exactly to an in-game group or the script will fail."><span class="infolink" onclick="showHelp(this, 10);"></span></span></td>
+          </tr>
+          <tr style="margin-bottom: 5px;">
+            <td class="chunkpreview unselectable" colspan="4"></td>
+          </tr>
+        </tbody></table>
+        <div class="addButton">
+          <div class="newchunk">
+            <button class="appendButton" onmouseover="mouseOverAppend(this);" onmouseout="mouseOutAppend(this);" onclick="appendBlock(this);">+ Add New Chunk</button><span class="infolink" onclick="showHelp(this, 7);"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+  
+</body></html>
